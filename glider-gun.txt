@@ -21,7 +21,3 @@
 ---------------------------------------------
 ---------------------------------------------
 
-# Gosper's Glider Gun.
-# The "gun" at the top will repeatedly fire off gliders that
-# head southwest.  With it, Gosper claimed a $50 prize offered 
-# by Conway for the discovery of a Life pattern which grows without bound. 

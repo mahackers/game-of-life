@@ -85,11 +85,14 @@ parser = argparse.ArgumentParser(description='Runs a conway\'s game of life simu
 parser.add_argument('file', type=str,
                     help='the file to read the setup from')
 parser.add_argument('-n', dest='num', type=int,
-                    help='sum the integers (default: find the max)')
+                    help='the number of animation frames to do')
+parser.add_argument('-t', dest='time', type=float,
+                    help='the time to delay for the animation')
+
 
 args = parser.parse_args()
 
-f = open(args.file, "r", encoding="utf-8" )
+f = open(args.file, "r" )
 
 grid = Grid.from_stream(f)
 
@@ -97,7 +100,7 @@ grid = Grid.from_stream(f)
 clearScreen()
 for i in range(0, args.num):
     print(str(grid))
-    time.sleep(.4)
+    time.sleep(args.time)
     clearScreen()
     grid = grid.next_grid()
 
